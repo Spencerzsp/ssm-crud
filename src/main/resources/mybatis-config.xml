@@ -12,8 +12,13 @@
         <package name="com.bigdata.ssm.crud.bean"></package>
     </typeAliases>
 
+    <!--配置分页插件-->
     <plugins>
-        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--配置分页大于等于1，小于等于最后一页-->
+            <!--分页参数合理化-->
+            <property name="reasonable" value="true"></property>
+        </plugin>
     </plugins>
 
 </configuration>
